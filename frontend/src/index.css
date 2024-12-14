@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-primary: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-black: #000000; /* Main black color */
+  --color-purple: #0e0e0e; /* Soft purple */
+  --color-pink: #151414; /* Pinkish shade */
+  --color-darkPurple: #1e1e2e; /* Dark purple for secondary background */
+  --color-lightPink: #0d0105; /* Light pink for highlights */
+  --line-height: 1.5;
+  --font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-black); /* Black background */
+  color: var(--color-lightPink); /* Light pink text */
+  font-family: var(--font-primary);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #111111; /* A lighter, vibrant pink for headings */
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--color-purple); /* Purple for links */
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-lightPink); /* Light pink on hover */
+}
+
+button {
+  background-color: var(--color-purple); /* Purple background for buttons */
+  color: rgb(6, 6, 6); /* White text for buttons */
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem; /* Reduced size */
+  font-size: 0.9rem; /* Smaller text */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #fd79a8; /* Lighter pink on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.card {
+  background-color: var(--color-darkPurple); /* Dark purple card background */
+  color: var(--color-lightPink); /* Light pink text */
+  border-radius: 6px; /* Slightly smaller border-radius */
+  padding: 1rem; /* Reduced padding */
+  margin: 1rem 0;
+  box-shadow: 0 2px 6px rgba(33, 4, 94, 0.2); /* Subtle purple glow */
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.4); /* Enhanced glow on hover */
+}
+
+header {
+  text-align: center;
+  padding: 0.8rem; /* Reduced header padding */
+  background-color: var(--color-darkPurple); /* Dark purple header background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem; /* Slightly smaller font size */
+}
+
+footer {
+  text-align: center;
+  padding: 0.8rem; /* Reduced footer padding */
+  background-color: var(--color-darkPurple); /* Dark purple footer */
+  color: var(--color-lightPink);
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem; /* Slightly reduced padding */
+}
+
+.logo {
+  height: 4rem; /* Reduced size */
+  padding: 1rem;
+  transition: filter 300ms, transform 0.3s ease;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1.5rem #646cffaa);
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 15s linear;
+  }
+}
